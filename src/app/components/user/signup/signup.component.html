@@ -1,0 +1,59 @@
+<div class="title-container">
+  <h1 style="text-align: center; font-weight: bolder; font-size: 100px;">
+    CAPCO
+  </h1>
+</div>
+<br />
+<hr />
+<mat-card class="signupForm">
+  <form #signupForm="ngForm" [formGroup]="form" (submit)="onSubmit()">
+    <h2>Sign Up</h2>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input
+        (keydown)="checkInput($event, 'name', 3)"
+        (blur)="checkInput($event, 'name', 3)"
+        [formControlName]="'name'"
+        matInput
+        type="text"
+      />
+      <mat-error>
+        <span>{{ nameState.errorMsg }}</span>
+      </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Email Address</mat-label>
+      <input
+        (keydown)="checkInput($event, 'email', null)"
+        (blur)="checkInput($event, 'email', null)"
+        [formControlName]="'email'"
+        matInput
+        type="email"
+      />
+      <mat-error>
+        <span>{{ emailState.errorMsg }}</span>
+      </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        (keydown)="checkInput($event, 'password', 6)"
+        (blur)="checkInput($event, 'password', 6)"
+        [formControlName]="'password'"
+        matInput
+        type="password"
+        autocomplete="on"
+      />
+      <mat-error>
+        <span>{{ passwordState.errorMsg }}</span>
+      </mat-error>
+    </mat-form-field>
+    <div style="text-align: center;">
+      <button [disabled]="this.form.invalid" type="submit" class="btn">
+        Sign up
+      </button>
+    </div>
+  </form>
+</mat-card>

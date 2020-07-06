@@ -1,0 +1,45 @@
+mat-card {
+  text-align: center;
+  margin: 60px auto;
+  box-shadow: 0px 10px 55px grey !important;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding: 25px;
+
+  button {
+    margin-top: 15px;
+    background-color: #910024;
+    color: white;
+    width: 55%;
+  }
+}
+
+mat-form-field {
+  width: 70% !important;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bolder;
+  font-size: 55px;
+}
+
+@media screen and (max-width: 600px) {
+  mat-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  mat-card {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  mat-card {
+    width: 40%;
+  }
+}

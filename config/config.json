@@ -1,0 +1,10 @@
+{
+  "development": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb+srv://scottwsmyth:Ha1992;;@mixdown-jxf7n.mongodb.net/community-portal?retryWrites=true&w=majority"
+  },
+  "production": {
+    "PORT": 80,
+    "MONGODB_URI": "TBA"
+  }
+}
